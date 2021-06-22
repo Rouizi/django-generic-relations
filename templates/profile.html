@@ -1,4 +1,20 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<section class="card">
+  <h1>{{ profile.user.username }}</h1>
+  <div>{{ profile.about }}</div>
+</section>
+{% for comment in comments %}
+<div class="card mt-5">
+  <p><strong>{{ comment.author }}</strong> said:</p>
+  <p>{{ comment.content }}</p>
+</div>
+{% endfor %}
+
+<form class="card mt-5" method="post">
+ {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Submit</button>
+</form>
 {% endblock content %}
