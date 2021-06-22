@@ -13,7 +13,7 @@ class Comment(models.Model):
     content_object = GenericForeignKey()
 
     def __str__(self):
-        return self.author
+        return self.content
 
 
 class Post(models.Model):
@@ -26,7 +26,7 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
-    
+
 class Profile(models.Model):
     about = models.TextField()
     user = models.OneToOneField(User, on_delete=models.CASCADE)
