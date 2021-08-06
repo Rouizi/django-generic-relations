@@ -1,4 +1,5 @@
 # django-generic-relations
+This is the repository for the tutorial: https://dontrepeatyourself.org/post/how-to-use-djangos-generic-foreign-key/
 
 ## Setup
 
